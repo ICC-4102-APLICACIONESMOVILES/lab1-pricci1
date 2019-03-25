@@ -26,7 +26,10 @@ class LoginActivity : AppCompatActivity() {
         if (TextUtils.isEmpty(passTxt) || TextUtils.isEmpty(mailTxt)) {
             var toast = Toast.makeText(this, R.string.empty_fields, Toast.LENGTH_SHORT)
             toast.show()
-        } else if (Patterns.EMAIL_ADDRESS.matcher(mailTxt).matches()) {
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(mailTxt).matches()){
+            var toast2 = Toast.makeText(this, R.string.invalid_mail, Toast.LENGTH_SHORT)
+            toast2.show()
+        } else {
             // Go to main activity
             val intent = Intent(this, MainActivity::class.java)
             intent.putExtra(EXTRA_LOGIN_PASS, passTxt)
