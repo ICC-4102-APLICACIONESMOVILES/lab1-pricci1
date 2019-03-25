@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">lab1</string>
+    <string name="loginText">User mail:</string>
+    <string name="passwordLabel">Password:</string>
+    <string name="signInButtonLabel">Sign In</string>
+    <string name="logInButtonLabel">Log in</string>
+    <string name="empty_fields">All fields must be filled</string>
+</resources>
